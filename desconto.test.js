@@ -26,3 +26,14 @@ test('percentual acima de 100 lança erro', () => {
     /percentual inválido/
   );
 });
+// Terceiro teste: 0% de desconto (o valor final deve ser igual ao original)
+test('0% de desconto em 200 resulta em 200', () => {
+  const resultado = calcularDesconto(200, 0);
+  assert.strictEqual(resultado, 200);
+});
+
+// Quarto teste: 100% de desconto (o valor final deve ser 0)
+test('100% de desconto em 200 resulta em 0', () => {
+  const resultado = calcularDesconto(200, 100);
+  assert.strictEqual(resultado, 0);
+});
