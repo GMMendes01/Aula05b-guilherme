@@ -17,12 +17,9 @@ test('entrega de 0 km custa R$ 7', () => {
   assert.strictEqual(calcularFrete(0), 7);
 });
 
-// Teste individual baseado no seu RA
 test('entrega com a distância do meu RA', () => {
-  // Substitua DISTANCIA_CALCULADA pelo D que você achou com os 2 últimos dígitos do seu RA
-  const distancia = DISTANCIA_CALCULADA; 
-  // Substitua VALOR_FRETE_ESPERADO pelo preço em reais calculado (ex: 20)
-  const valorEsperado = VALOR_FRETE_ESPERADO; 
+  const distancia = 25;       // 11 + 14 (resto de 44/15)
+  const valorEsperado = 27;   // 7 + (25 - 5)
 
   assert.strictEqual(calcularFrete(distancia), valorEsperado);
 });
